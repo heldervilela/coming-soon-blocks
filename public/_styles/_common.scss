@@ -1,0 +1,28 @@
+@import 'block-editor/_vendor/easings';
+@import 'block-editor/_vendor/mix';
+
+/**
+ * Colors
+ */
+$color--green: #2ED775;
+$color--borders: #e2e4e7;
+$color--icons: #555d67;
+$color--icons--hover: #191e23;
+$color--highlight: #FFD100;
+$color--alert: #faae22;
+$color--error: #E20E0F;
+$color--text: #555d66;
+$color--link-hover: #00a0d2;
+$color--link: #0073aa;
+$color--line: #e2e4e7;
+$color--gray-bg:  rgba(139,139,150,.1);
+
+/**
+ * Media Queryes
+ */
+$breakpoint__mobile: 767px;
+$breakpoint__tablet-portrait: 1023px;
+$breakpoint__tablet: 1024px;
+$breakpoint__laptops: 1200px;
+$breakpoint__desktops: 1800px;
+$breakpoint__wide: 1800px;

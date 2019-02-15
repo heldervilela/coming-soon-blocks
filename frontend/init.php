@@ -3,10 +3,10 @@
 /**
  * Main class to manage frontend view.
  *
- * @package   Coming Soon Blocks
- * @author    Helder Vilela from Pixelthrone
- * @link      htts://pixelthrone.com
- * @license   GPL-3.0
+ * @package   @@pkg.title
+ * @author    @@pkg.author
+ * @link      @@pkg.author_uri
+ * @license   @@pkg.license
  */
 namespace Pixelthrone\ComingSoon_Blocks\Frontend;
 
@@ -171,7 +171,7 @@ class Init
     public function only_allow_logged_in_rest_access( $access )
     {
         if ( !is_user_logged_in() ) {
-            return new WP_Error( 'rest_cannot_access', __( 'Only authenticated users can access the REST API.', 'coming-soon-blocks' ), [
+            return new WP_Error( 'rest_cannot_access', __( 'Only authenticated users can access the REST API.', '@@pkg.textdomain' ), [
                 'status' => rest_authorization_required_code(),
             ] );
         }

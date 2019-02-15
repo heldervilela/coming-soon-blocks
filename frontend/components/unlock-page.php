@@ -4,10 +4,10 @@
  *
  * @since 1.0.0
  *
- * @package   Coming Soon Blocks
- * @author    Helder Vilela from Pixelthrone
- * @link      htts://pixelthrone.com
- * @license   GPL-3.0
+ * @package   @@pkg.title
+ * @author    @@pkg.author
+ * @link      @@pkg.author_uri
+ * @license   @@pkg.license
  */
 use Pixelthrone\ComingSoon_Blocks\Utils;
 $button_bg = ( isset($button_bg) && ! empty($button_bg) ) ? "style='background-color:{$button_bg};'" : '';
@@ -20,7 +20,7 @@ $button_bg = ( isset($button_bg) && ! empty($button_bg) ) ? "style='background-c
 	</a>
 	<div class="content__wrapper">
 		<span><p></p></span>
-		<p><?php esc_html_e( 'This site is password protected, view by typing the password.', 'coming-soon-blocks' ); ?></p>
+		<p><?php esc_html_e( 'This site is password protected, view by typing the password.', '@@pkg.textdomain' ); ?></p>
 		<input type="password" name="password" placeholder="∙∙∙∙∙∙">
 		<i></i>
 	</div>

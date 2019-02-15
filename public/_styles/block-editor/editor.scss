@@ -1,0 +1,215 @@
+/**
+ * Editor Components
+ */
+@import 'components/editor/brand-upload.scss';
+@import 'components/editor/image-upload.scss';
+@import 'components/editor/inspector-controls-image-uploader.scss';
+@import 'components/editor/misc-components--sidebar.scss';
+@import 'components/editor/font-picker.scss';
+@import 'components/editor/background.scss';
+@import 'components/editor/panel-uploader-placeholder';
+@import 'components/editor/_sidebar.scss';
+
+body {
+
+	&.block-editor-page {
+		div[data-manager-id="coming-soon-blocks"].fs-notice.updated,
+		div[data-manager-id="coming-soon-blocks"].fs-notice.success,
+		div[data-manager-id="coming-soon-blocks"].fs-notice.promotion {
+			display: none !important;
+		}
+	}
+
+	// Editor Blocks Wrapper
+	#editor {
+
+		&.-editor-is-ready {
+			background-image: url('../svg/empty-bg.svg');
+			background-size: 70%;
+			background-repeat: no-repeat;
+			background-position: center center;
+
+			@media only screen and (max-width: 900px) { background-image: none; }
+			@media only screen and (min-width: 1400px) { background-size: inherit; }
+			@media only screen and (max-height: 900px) { background-image: none; }
+		}
+
+		/**
+		 * Misc
+		 */
+		body.block-editor-page #wpbody-content>div:not(.block-editor):not(#screen-meta), body.block-editor-page #wpfooter {
+			display: none !important;
+		}
+
+		/**
+		 * Top Menu
+		 */
+		.components-button.editor-post-preview.is-button.is-default.is-large {
+			display: none;
+		}
+
+		/**
+		 * Options Panel
+		 */
+		.components-panel__body {
+			&.is-opened {
+				border-bottom: 1px solid #e2e4e7;
+			}
+		}
+
+		/**
+		 * Sidebar
+		 */
+		.edit-post-sidebar {
+			.components-panel__header.edit-post-sidebar-header {
+				> button:nth-of-type(1) {
+					opacity: 0;
+					visibility: hidden;
+					pointer-events: none;
+				}
+			}
+		}
+
+		/**
+		 * Sidebar: Publish Panel
+		 */
+		.editor-post-publish-panel .editor-post-publish-panel__prepublish {
+			.components-panel__body {
+				display: none;
+			}
+		}
+
+		/**
+		 * Document sidebar
+		 */
+		.edit-post-sidebar {
+			.components-panel {
+				> .components-panel__body:not( .edit-post-settings-sidebar__panel-block ):not(.edit-post-last-revision__panel) {
+					display: none;
+				}
+			}
+		}
+
+		/**
+		 * More submenu
+		 */
+		.components-popover__content {
+			// Plugins
+			.components-menu-group:nth-of-type(3) {
+				display: none;
+			}
+			// Reusable Blocks
+			a[href="edit.php?post_type=wp_block"] {
+				display: none;
+			}
+		}
+
+		// Full editor layout
+		.edit-post-layout {
+			/**
+			 * Header
+			 */
+			@import 'components/editor/edit-post-header.scss';
+
+			/**
+			 * Page Title.
+			 */
+			@import 'components/editor/editor-post-title.scss';
+
+			/**
+			 * Block Appender
+			 */
+			.block-list-appender, .editor-default-block-appender {
+				display: none;
+			}
+
+			/**
+			 * Writing area
+			 */
+			.edit-post-visual-editor {
+				padding: 0;
+				margin: 0;
+
+				.editor-writing-flow {
+
+					> div {
+						> div {
+							display: flex;
+							flex-direction: column;
+							flex-wrap: nowrap;
+							justify-content: flex-start;
+							align-items: center;
+
+							// Title
+							> div {
+								width: 100%;
+								height: 58px;
+							}
+
+							// Content
+							// Fix full width layout
+							.editor-block-list__layout {
+								flex-grow: 1;
+								width: 100%;
+								height: 100%;
+								padding: 0;
+								// Blocks
+								.wp-block {
+									height: 100%;
+									position: relative;
+									top: 0;
+									margin: 0;
+									padding: 0;
+									width: 100%;
+									max-width: 100%;
+									overflow: hidden;
+									.editor-block-list__block-edit {
+										margin: 0;
+									}
+								}
+								// Insert Points
+								.editor-block-list__insertion-point {
+									display: none;
+								}
+								// Options to move block
+								.editor-block-mover {
+									display: none;
+								}
+								// Toolbar
+								.editor-block-contextual-toolbar {
+									margin: 0;
+									text-align: left;
+								}
+								// Breadcrumb
+								.editor-block-list__breadcrumb {
+									right: 0;
+									top: 0;
+								}
+								// Remove block for empty page
+								div[data-type="core/paragraph"] {
+									display: none;
+								}
+							}
+						}
+					}
+					.editor-writing-flow__click-redirect {
+						display: none;
+					}
+				}
+			}
+		}
+
+		/**
+		 * Block settings: Popover menu
+		 */
+		.editor-block-settings-menu__popover {
+
+			.editor-block-settings-menu__content {
+				button:nth-of-type(1), button:nth-of-type(2), button:nth-of-type(3), button:nth-of-type(4), button:nth-of-type(5), .editor-block-settings-menu__separator {
+					display: none;
+				}
+			}
+		}
+
+	}
+}

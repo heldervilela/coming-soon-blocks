@@ -32,11 +32,11 @@ return [
 	],
 	'subtitleText' => [
 		'type'    => 'string',
-		'default' => esc_html__( 'IF YOU DO IT RIGHT, IT WILL LAST FOREVER.', 'coming-soon-blocks' )
+		'default' => esc_html__( 'IF YOU DO IT RIGHT, IT WILL LAST FOREVER.', '@@pkg.textdomain' )
 	],
 	'networksText' => [
 		'type'    => 'string',
-		'default' => esc_html__( 'STAY IN TOUCH', 'coming-soon-blocks' )
+		'default' => esc_html__( 'STAY IN TOUCH', '@@pkg.textdomain' )
 	],
 	'copyrightText' => [
 		'type'    => 'string',

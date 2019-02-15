@@ -1,0 +1,137 @@
+$border-color: #e5e5e5;
+$text-color: #000000;
+
+div[data-component="pages-list"] {
+	margin-top: 20px;
+	background-color: white;
+	border: 1px solid $border-color;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+
+	/**
+	 * List
+	 */
+	> .page__wrapper {
+		transition: all 0.6s $easeOutQuart;
+		border-left: 4px solid transparent;
+		border-bottom: 1px solid $border-color;
+		padding: 10px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+
+		// Active
+		&[data-active="true"] {
+			border-left-color: #00a0d2;
+			background-color: #f7fcfe;
+			box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1);
+		}
+
+		// Loading
+		&[data-loading="true"] {
+			position: relative;
+			> .components-spinner {
+				position: absolute;
+				top: 14px;
+				left: 95px;
+				z-index: 10;
+			}
+			.remove-button { opacity: 0; }
+			&::before {
+				content: " ";
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: transparent;
+				opacity: 1;
+				z-index: 10;
+				cursor: progress;
+			}
+		}
+
+		// Status
+		.status__column {
+			flex-shrink: 0;
+			input:focus {
+				border: none !important;
+				box-shadow: none !important;
+			}
+			.components-base-control__field {
+				margin-bottom: 0;
+			}
+		}
+
+		// Actions
+		.actions__column {
+			flex-shrink: 0;
+			padding-left: 0;
+			padding-right: 30px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-items: center;
+
+			// Remove popover
+			.remove-button {
+				> button {
+					span { display: none; }
+				}
+				.components-popover__content {
+					width: auto;
+					min-width: 150px;
+					button {
+						white-space: nowrap;
+						margin-bottom: 0;
+						&:focus {
+							outline: none !important;
+						}
+					}
+				}
+			}
+		}
+		.title__column {
+			flex-grow: 1;
+			button, a {
+				padding: 0;
+				margin: 0;
+				font-size: 14px;
+				text-decoration: none;
+
+				sub {
+					transition: all 0.6s $easeOutQuart;
+					margin-left: 4px;
+					opacity: 0.5;
+					color: $text-color;
+					font-weight: normal;
+				}
+			}
+		}
+		.date__column {
+			transition: all 0.6s $easeOutQuart;
+			opacity: 0;
+		}
+
+		/* ---- hover ---- */
+
+		&:hover {
+			.date__column { opacity: 1; }
+			.title__column sub { opacity: 1; }
+		}
+	}
+
+	/**
+	 * Empty
+	 */
+	.empty-list__wrapper {
+		padding: 15px;
+		font-size: 14px;
+	}
+}

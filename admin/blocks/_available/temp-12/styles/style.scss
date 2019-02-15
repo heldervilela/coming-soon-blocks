@@ -1,0 +1,162 @@
+main[data-block="pixelthrone/comingsoon--temp-12"] {
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+
+	div, span {
+		box-sizing: border-box;
+	}
+	.the-wrapper {
+		width: 100%;
+		max-width: 1600px;
+		margin: 0 auto;
+		min-height: 100vh;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+		align-items: stretch;
+		background-color: white;
+
+		/* ---- Content ---- */
+		.the-content {
+			position: relative;
+			width: 45%;
+			z-index: 5;
+			padding-left: 80px;
+
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: flex-start;
+
+			.the-brand {
+				margin-bottom: 20px;
+			}
+
+			h1 {
+				margin-bottom: 10px;
+			}
+
+			p a {
+				color: inherit;
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			div[data-component="social-icons"] {
+				width: auto;
+				display: inline-flex;
+				margin-top: 20px;
+				margin-left: -15px;
+
+				button[data-empty="true"] {
+					right: -45px;
+				}
+			}
+
+			.intro-text {
+				flex-grow: 1;
+
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-items: flex-start;
+
+				padding-right: 30px;
+
+				.-description-text {
+					line-height: 1.5;
+					margin: 0;
+				}
+			}
+			.copy-text {
+				margin-bottom: 20px;
+				opacity: 0.6;
+				p {
+					margin: 0;
+				}
+			}
+
+		}
+
+		/* ---- Image ---- */
+		.the-image {
+			position: relative;
+			width: 55%;
+			z-index: 5;
+			padding: 15px;
+
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				display: inherit;
+				margin: 0 auto;
+				max-width: 100%;
+			}
+		}
+
+	}
+
+	/**
+	 * Media
+	 */
+	@include media(tablet) {
+		.the-wrapper {
+			.the-content {
+				width: 50%;
+				padding-left: 40px;
+			}
+			.the-image {
+				width: 50%;
+			}
+		}
+	}
+	@include media(tablet-portrait) {
+		.the-wrapper {
+			flex-direction: column-reverse;
+			justify-content: flex-end;
+			align-items: flex-start;
+
+			.the-content {
+				width: 100%;
+				padding-left: 40px;
+
+				.copy-text {
+					margin-top: 50px;
+				}
+			}
+			.the-image {
+				width: 100%;
+				margin-bottom: 60px;
+				img { max-width: 80%; }
+			}
+		}
+	}
+	@include media(mobile) {
+		.the-wrapper {
+			.the-content {
+				padding: 0 30px;
+				.copy-text {
+					margin-top: 30px;
+					padding-right: 50px;
+					width: 100%;
+				}
+			}
+			.the-image {
+				margin-bottom: 30px;
+				img { max-width: 90%; }
+			}
+		}
+	}
+}
+

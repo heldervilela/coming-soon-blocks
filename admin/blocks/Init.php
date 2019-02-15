@@ -2,10 +2,10 @@
 /**
  * Init editor block.
  *
- * @package   Coming Soon Blocks
- * @author    Helder Vilela from Pixelthrone
- * @link      htts://pixelthrone.com
- * @license   GPL-3.0
+ * @package   @@pkg.title
+ * @author    @@pkg.author
+ * @link      @@pkg.author_uri
+ * @license   @@pkg.license
  */
 
 namespace Pixelthrone\ComingSoon_Blocks\Blocks;
@@ -313,7 +313,7 @@ class Init {
 			return;
 		}
 
-		wp_set_script_translations( $this->slug . '-editor', 'coming-soon-blocks' );
+		wp_set_script_translations( $this->slug . '-editor', '@@pkg.textdomain' );
 	}
 
 	/**
@@ -340,8 +340,8 @@ class Init {
 
 		?>
 		<div class="notice notice-warning" style="border-left: 4px solid #ffb900;">
-			<h2 class="title" style="margin-bottom: 0;"><?php esc_html_e( 'Oops, we\'re in the wrong editor.', 'coming-soon-blocks' ); ?></h2>
-			<p><?php printf( esc_html__( '%sSwitch to Block Editor%s to start creating your coming soon pages.', 'coming-soon-blocks' ), '<a href="'.$edit_url.'" class="button">', '</a>' );  ?></p>
+			<h2 class="title" style="margin-bottom: 0;"><?php esc_html_e( 'Oops, we\'re in the wrong editor.', '@@pkg.textdomain' ); ?></h2>
+			<p><?php printf( esc_html__( '%sSwitch to Block Editor%s to start creating your coming soon pages.', '@@pkg.textdomain' ), '<a href="'.$edit_url.'" class="button">', '</a>' );  ?></p>
 		</div>
 		<?php
 	}

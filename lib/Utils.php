@@ -2,10 +2,10 @@
 /**
  * Plugin utilities functions.
  *
- * @package coming-soon-blocks
- * @version 1.3.0
- * @author  Helder Vilela from Pixelthrone
- * @license GPL-3.0
+ * @package @@pkg.name
+ * @version @@pkg.version
+ * @author  @@pkg.author
+ * @license @@pkg.license
  */
 namespace Pixelthrone\ComingSoon_Blocks\Utils;
 use Pixelthrone\ComingSoon_Blocks\Plugin;

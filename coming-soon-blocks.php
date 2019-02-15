@@ -2,26 +2,26 @@
 /**
  * Plugin Name: Coming Soon Blocks
  * Plugin URI: https://pixelthrone.com/coming-soon-blocks
- * Description: Create an coming soon page for your startups easily and fast while your website is not built.
+ * Description: @@pkg.description
  * Author: Helder Vilela from Pixelthrone
  * Author URI: https://heldervilela.com
  * Tags: gutenberg, editor, block, layout, coming Soon, under Construction, maintenance
- * Version: 1.3.0
+ * Version: 1.3.1
  * Text Domain: coming-soon-blocks
  * Domain Path: languages
- * Tested up to: 5.1
+ * Tested up to: @@pkg.tested_up_to
  *
- * Coming Soon Blocks is distributed in the hope that it will be useful,
+ * @@pkg.title is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with Coming Soon Blocks. If not, see <http://www.gnu.org/licenses/>.
+ * along with @@pkg.title. If not, see <http://www.gnu.org/licenses/>.
  *
- * @package   coming-soon-blocks
- * @author    Helder Vilela from Pixelthrone
- * @license   GPL-3.0
+ * @package   @@pkg.package
+ * @author    @@pkg.author
+ * @license   @@pkg.license
  */
 
 namespace Pixelthrone\ComingSoon_Blocks;
@@ -135,7 +135,7 @@ class Initialize {
 		/**
 		 * Loads the plugin language files
 		 */
-		load_plugin_textdomain( 'coming-soon-blocks', false, dirname( plugin_basename( plugin_dir_path( __FILE__ ) ) ) . '/languages/' );
+		load_plugin_textdomain( '@@pkg.textdomain', false, dirname( plugin_basename( plugin_dir_path( __FILE__ ) ) ) . '/languages/' );
 	}
 
 	/**
@@ -188,7 +188,7 @@ class Initialize {
 	public
 	function __clone() {
 		// Cloning instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'coming-soon-blocks' ), '1.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', '@@pkg.textdomain' ), '1.0' );
 	}
 
 	/**
@@ -201,7 +201,7 @@ class Initialize {
 	public
 	function __wakeup() {
 		// Unserializing instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'coming-soon-blocks' ), '1.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', '@@pkg.textdomain' ), '1.0' );
 	}
 }
 

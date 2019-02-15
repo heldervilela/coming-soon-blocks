@@ -2,10 +2,10 @@
 /**
  * Modifies the "Thank you" text displayed in the admin footer
  *
- * @package   Coming Soon Blocks
- * @author    Helder Vilela from Pixelthrone
- * @link      htts://pixelthrone.com
- * @license   GPL-3.0
+ * @package   @@pkg.title
+ * @author    @@pkg.author
+ * @link      @@pkg.author_uri
+ * @license   @@pkg.license
  */
 namespace Pixelthrone\ComingSoon_Blocks\Lib;
 use Pixelthrone\ComingSoon_Blocks\Plugin;

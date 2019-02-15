@@ -1,0 +1,24 @@
+body {
+	#coming-soon-blocks--dashboard {
+		* {
+			box-sizing: border-box;
+		}
+
+		// Header
+		.page-header__wrapper {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		// Actions
+		.page-actions__wrapper {
+			margin-top: 20px;
+		}
+
+	}
+}
+
+

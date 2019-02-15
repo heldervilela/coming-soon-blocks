@@ -1,0 +1,171 @@
+main[data-block="pixelthrone/comingsoon--temp-10"] {
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: stretch;
+	background-color: white;
+
+	div, span {
+		box-sizing: border-box;
+	}
+
+	/* ---- Left Side ---- */
+	.the-left-side {
+		position: relative;
+		width: 50%;
+		z-index: 5;
+		padding: 15px;
+
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: flex-start;
+
+		img {
+			display: inherit;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	}
+
+	/* ---- right Side ---- */
+	.the-right-side {
+		position: relative;
+		width: 50%;
+		z-index: 5;
+		padding-left: 80px;
+		height: auto;
+
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		.the-brand {
+			margin-bottom: 20px;
+		}
+
+		h1 {
+			margin-bottom: 10px;
+		}
+
+		p a {
+			color: inherit;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		div[data-component="social-icons"] {
+			width: auto;
+			display: inline-flex;
+			margin-top: 50px;
+			margin-left: -15px;
+
+			button[data-empty="true"] {
+				right: -45px;
+			}
+		}
+
+		.top-div {}
+		.intro-text {
+			.-description-text { line-height: 1.5; }
+		}
+		.copy-text {
+			margin-bottom: 20px;
+			opacity: 0.6;
+			p {
+				margin: 0;
+			}
+		}
+
+	}
+
+
+	/**
+	 * Media
+	 */
+	@include media(tablet) {
+
+		.the-right-side {
+			padding-left: 40px;
+			padding-right: 30px;
+			.top-div {
+				height: 100px;
+				width: 100%;
+			}
+			div[data-component="social-icons"] {
+				margin-top: 30px;
+			}
+		}
+	}
+	@include media(tablet-portrait) {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-wrap: nowrap;
+
+		.the-left-side {
+			width: 100%;
+			padding-top: 50px;
+			img {
+				max-width: 80%;
+			}
+		}
+		.the-right-side {
+			flex-grow: 1;
+			padding: 50px;
+			height: initial;
+			width: 100%;
+			.top-div { display: none; }
+			.intro-text {
+				.the-brand { margin-bottom: 10px; }
+				div[data-component="social-icons"] {
+					margin-top: 10px;
+					margin-bottom: 20px;
+				}
+			}
+			.copy-text { margin-bottom: 0; }
+		}
+	}
+	@include media(mobile) {
+		.the-left-side {
+			padding: 20px 20px 0 20px;
+			img {
+				max-width: 100%;
+			}
+		}
+		.the-right-side {
+			padding: 30px;
+			strong {
+				display: block;
+			}
+		}
+	}
+}
+
+
+/**
+ * Password Protected
+ */
+body[data-password-protected="true"] {
+	main[data-block="pixelthrone/comingsoon--temp-10"] {
+
+		/**
+		 * Media
+		 */
+		@include media(mobile) {
+			.copy-text { max-width: 250px; }
+		}
+	}
+}
+

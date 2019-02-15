@@ -2,10 +2,10 @@
 /**
  * Class to add menu to toolbar.
  *
- * @package   Coming Soon Blocks
- * @author    Helder Vilela from Pixelthrone
- * @link      htts://pixelthrone.com
- * @license   GPL-3.0
+ * @package   @@pkg.title
+ * @author    @@pkg.author
+ * @link      @@pkg.author_uri
+ * @license   @@pkg.license
  */
 
 namespace Pixelthrone\ComingSoon_Blocks\Toolbar;

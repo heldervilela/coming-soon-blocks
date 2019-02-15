@@ -2,10 +2,10 @@
 /**
  * Init gutenberg blocks.
  *
- * @package   Coming Soon Blocks
- * @author    Helder Vilela from Pixelthrone
- * @link      htts://pixelthrone.com
- * @license   GPL-3.0
+ * @package   @@pkg.title
+ * @author    @@pkg.author
+ * @link      @@pkg.author_uri
+ * @license   @@pkg.license
  */
 
 namespace Pixelthrone\ComingSoon_Blocks\Dashboard;
@@ -187,7 +187,7 @@ class Init {
 		];
 
 		wp_script_add_data( $this->slug . '-dashboard', 'data', implode( $content, ' ' ) );
-		wp_set_script_translations( $this->slug . '-dashboard', 'coming-soon-blocks' );
+		wp_set_script_translations( $this->slug . '-dashboard', '@@pkg.textdomain' );
 	}
 
 

@@ -2,10 +2,10 @@
 /**
  * Unlock Coming Soon Page
  *
- * @package coming-soon-blocks
- * @version 1.3.0
- * @author  Helder Vilela from Pixelthrone
- * @license GPL-3.0
+ * @package @@pkg.name
+ * @version @@pkg.version
+ * @author  @@pkg.author
+ * @license @@pkg.license
  */
 
 namespace Pixelthrone\ComingSoon_Blocks\Api;
@@ -70,7 +70,7 @@ class UpdatePost {
 	function callback( WP_REST_Request $request ) {
 
 		if ( ! current_user_can( 'manage_options' ) ) {
-			return new WP_Error( 'manage-options', esc_html__( 'User has no permissions to edit the page.', 'coming-soon-blocks' ), [ 'status' => 403 ] );
+			return new WP_Error( 'manage-options', esc_html__( 'User has no permissions to edit the page.', '@@pkg.textdomain' ), [ 'status' => 403 ] );
 		}
 
 		$id               = $request->get_param( 'id' );
@@ -86,7 +86,7 @@ class UpdatePost {
 			'data'              => [
 				'status' => 200,
 			],
-			'message'           => esc_html__( 'Page updated.', 'coming-soon-blocks' )
+			'message'           => esc_html__( 'Page updated.', '@@pkg.textdomain' )
 		];
 
 		return new WP_REST_Response( $response, 200 );

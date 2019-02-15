@@ -1,0 +1,59 @@
+body {
+	#adminmenuwrap > ul {
+		// Plugin menu
+		#menu-posts-coming-soon-blocks {
+			ul {
+				li > a[href*='account']:not(.current),
+				li:nth-last-child(3) a:not(.current),
+				li:nth-last-child(2) a:not(.current) {
+					opacity: 0.6;
+					&:hover {
+						opacity: 1;
+					}
+				}
+				li:nth-of-type(7) {
+					a { color: inherit; font-weight: bold; }
+				}
+			}
+		}
+	}
+
+
+
+	/**
+	 * Color Scheme
+	 *
+	 * @since    1.0.0
+	 */
+	// Default
+	$bg-featured: #00A0D2;
+	&.admin-color-fresh #adminmenuwrap > ul #menu-posts-coming-soon-blocks ul li a .pricing { color: $bg-featured; }
+
+	// Light
+	$bg-featured: #04A4CB;
+	&.admin-color-light #adminmenuwrap > ul #menu-posts-coming-soon-blocks ul li a .pricing  { color: $bg-featured; }
+
+	// Blue
+	$bg-featured: #096484;
+	&.admin-color-blue #adminmenuwrap > ul #menu-posts-coming-soon-blocks ul li a .pricing  { color: $bg-featured; }
+
+	// Coffee
+	$bg-featured: #C7A589;
+	&.admin-color-coffee #adminmenuwrap > ul #menu-posts-coming-soon-blocks ul li a .pricing  { color: $bg-featured; }
+
+	// Coffee
+	$bg-featured: #A3B745;
+	&.admin-color-ectoplasm #adminmenuwrap > ul #menu-posts-coming-soon-blocks ul li a .pricing  { color: $bg-featured; }
+
+	// Midnight
+	$bg-featured: #E14D43;
+	&.admin-color-midnight #adminmenuwrap > ul #menu-posts-coming-soon-blocks ul li a .pricing  { color: $bg-featured; }
+
+	// Ocean
+	$bg-featured: #9EBAA0;
+	&.admin-color-ocean #adminmenuwrap > ul #menu-posts-coming-soon-blocks ul li a .pricing  { color: $bg-featured; }
+
+	// Sunrise
+	$bg-featured: #F6D308;
+	&.admin-color-sunrise #adminmenuwrap > ul #menu-posts-coming-soon-blocks ul li a .pricing  { color: $bg-featured; }
+}

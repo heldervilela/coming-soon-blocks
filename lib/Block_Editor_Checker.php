@@ -2,10 +2,10 @@
 /**
  * Validate WordPress minimum version and if block editor is active.
  *
- * @package   Coming Soon Blocks
- * @author    Helder Vilela from Pixelthrone
- * @link      htts://pixelthrone.com
- * @license   GPL-3.0
+ * @package   @@pkg.title
+ * @author    @@pkg.author
+ * @link      @@pkg.author_uri
+ * @license   @@pkg.license
  */
 namespace Pixelthrone\ComingSoon_Blocks\Lib;
 
@@ -78,10 +78,10 @@ class Block_Editor_Checker {
 		$url = admin_url('options-writing.php');
 	?>
 		<div class="notice notice-warning" style="border-left: 4px solid #ffb900;">
-			<h2 class="title" style="margin-bottom: 0;"><?php esc_html_e( 'Some changes are required.', 'coming-soon-blocks' ); ?></h2>
-			<p><?php printf( esc_html__( 'In order to use the %sComing Soon Blocks%s plugin it is required that %sthese options%s have the following settings:', 'coming-soon-blocks' ), '<strong>','</strong>', '<a href="'.$url.'" class="button">', '</a>' );  ?></p>
+			<h2 class="title" style="margin-bottom: 0;"><?php esc_html_e( 'Some changes are required.', '@@pkg.textdomain' ); ?></h2>
+			<p><?php printf( esc_html__( 'In order to use the %sComing Soon Blocks%s plugin it is required that %sthese options%s have the following settings:', '@@pkg.textdomain' ), '<strong>','</strong>', '<a href="'.$url.'" class="button">', '</a>' );  ?></p>
 			<ul>
-				<li><?php printf( esc_html__( '— Allow users to switch editors : %sYes %s', 'coming-soon-blocks' ), '<strong>', '</strong>' );  ?></li>
+				<li><?php printf( esc_html__( '— Allow users to switch editors : %sYes %s', '@@pkg.textdomain' ), '<strong>', '</strong>' );  ?></li>
 			</ul>
 		</div>
 	<?php
@@ -97,8 +97,8 @@ class Block_Editor_Checker {
 	function wp5_notice() {
 	?>
 		<div class="notice notice-warning">
-			<h4 style="margin-bottom: 5px;"><?php esc_html_e( 'The Coming Soon Blocks plugin cannot be used with your current WordPress version. Please update to the latest version.', 'coming-soon-blocks' ); ?></h4>
-			<p><?php esc_html_e( 'Thank you for understanding.', 'coming-soon-blocks' ); ?></p>
+			<h4 style="margin-bottom: 5px;"><?php esc_html_e( 'The Coming Soon Blocks plugin cannot be used with your current WordPress version. Please update to the latest version.', '@@pkg.textdomain' ); ?></h4>
+			<p><?php esc_html_e( 'Thank you for understanding.', '@@pkg.textdomain' ); ?></p>
 		</div>
 	<?php
 	}

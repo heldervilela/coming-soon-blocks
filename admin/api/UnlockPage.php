@@ -2,10 +2,10 @@
 /**
  * Unlock Coming Soon Page
  *
- * @package coming-soon-blocks
- * @version 1.3.0
- * @author  Helder Vilela from Pixelthrone
- * @license GPL-3.0
+ * @package @@pkg.name
+ * @version @@pkg.version
+ * @author  @@pkg.author
+ * @license @@pkg.license
  */
 
 namespace Pixelthrone\ComingSoon_Blocks\Api;
@@ -74,7 +74,7 @@ class UnlockPage {
 
 		# Check the nonce
 		if ( ! $nonce ) {
-			return new WP_Error( 'invalid-nonce', esc_html__( 'No naughty business please!', 'coming-soon-blocks' ), [ 'status' => 403 ] );
+			return new WP_Error( 'invalid-nonce', esc_html__( 'No naughty business please!', '@@pkg.textdomain' ), [ 'status' => 403 ] );
 		}
 
 		$pageConfig = Plugin::get_frontend_settings();
@@ -88,7 +88,7 @@ class UnlockPage {
 					'data' => [
 						'status' => 200,
 					],
-					'message'  => esc_html__( 'The page will be updated.', 'coming-soon-blocks' )
+					'message'  => esc_html__( 'The page will be updated.', '@@pkg.textdomain' )
 				];
 
 				$pwd = Utils\encrypt($pwd);
@@ -98,12 +98,12 @@ class UnlockPage {
 			}
 			// Invalid password
 			else {
-				return new WP_Error( 'invalid-password', esc_html__( 'The password is not correct.', 'coming-soon-blocks' ), [ 'status' => 403 ] );
+				return new WP_Error( 'invalid-password', esc_html__( 'The password is not correct.', '@@pkg.textdomain' ), [ 'status' => 403 ] );
 			}
 
 
 		} else {
-			return new WP_Error( 'option-is-not-enabled', esc_html__( 'No naughty business please!', 'coming-soon-blocks' ), [ 'status' => 403 ] );
+			return new WP_Error( 'option-is-not-enabled', esc_html__( 'No naughty business please!', '@@pkg.textdomain' ), [ 'status' => 403 ] );
 		}
 
 	}

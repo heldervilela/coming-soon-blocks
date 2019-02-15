@@ -1,0 +1,206 @@
+body {
+
+	#wp-admin-bar-pt_comingsoonblocks_toolbar_group {
+
+		border-right: 1px solid #32373c;
+
+		/**
+		 * Buttons
+		 *
+		 * @since    1.0.0
+		 */
+		$size: 5px;
+		> a {
+			position: relative;
+			&::after {
+				content: " ";
+				width: $size;
+				height: $size;
+				border-radius: 50%;
+				position: absolute;
+				right: 6px;
+				bottom: 4px;
+				border: 2px solid transparent;
+				display: none;
+			}
+			i::before {
+				vertical-align: sub;
+				transform: translateY(1px);
+			}
+		}
+
+		// Submenu
+		.ab-submenu {
+			padding-bottom: 0;
+			li {
+				a {
+					i::before {
+						margin-top: 7px;
+						font-size: 18px;
+					}
+				}
+				&#wp-admin-bar-pt_comingsoonblocks_toolbar_settings {
+					margin-bottom: 13px;
+				}
+
+				&#wp-admin-bar-pt_comingsoonblocks_toolbar_contact-us {
+					margin-top: 0;
+					padding-top: 6px;
+					background-color: #32373C;
+				}
+				&#wp-admin-bar-pt_comingsoonblocks_toolbar_support-forum {}
+				&#wp-admin-bar-pt_comingsoonblocks_toolbar_upgrade {
+					padding-bottom: 6px;
+					a { color: inherit; }
+				}
+			}
+		}
+
+		/**
+		 * Enabled mode
+		 *
+		 * @since    1.0.0
+		 */
+		&.-coming-soon-enabled {
+			> a::after { display: block; }
+		}
+	}
+
+	/**
+	 * Color Scheme
+	 *
+	 * @since    1.0.0
+	 */
+	// Default
+	$bg-color: #23282C;
+	$bg-lighten-color: lighten($bg-color, 10%);
+	$bg-featured: #00A0D2;
+	&.admin-color-fresh #wp-admin-bar-pt_comingsoonblocks_toolbar_group {
+		> a::after { border-color: $bg-color; background-color: $bg-featured; }
+		.ab-submenu li {
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_contact-us { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_support-forum { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_upgrade { color: $bg-featured; background-color: $bg-lighten-color; }
+		}
+		&.hover > a::after { border-color: #32373C; }
+	}
+
+	// Light
+	$bg-color: #32373C;
+	$bg-lighten-color: #E5E5E5;
+	$bg-featured: #04A4CB;
+	&.admin-color-light #wp-admin-bar-pt_comingsoonblocks_toolbar_group {
+		> a {
+			color: #999999;
+			&::after { border-color: $bg-lighten-color; background-color: $bg-featured; }
+		}
+		.ab-submenu li {
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_contact-us { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_support-forum { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_upgrade { color: $bg-featured; background-color: $bg-lighten-color; }
+		}
+		&.hover > a::after { border-color: #FFFFFF; }
+	}
+
+	// Blue
+	$bg-color: #52ACCC;
+	$bg-lighten-color: #52ACCC;
+	$bg-featured: #096484;
+	&.admin-color-blue #wp-admin-bar-pt_comingsoonblocks_toolbar_group {
+		> a {
+			color: #E5F8FF;
+			&::after { border-color: $bg-lighten-color; background-color: $bg-featured; }
+		}
+		.ab-submenu li {
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_contact-us { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_support-forum { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_upgrade { color: $bg-featured; background-color: $bg-lighten-color; }
+		}
+		&.hover > a::after { border-color: #4796B3; }
+	}
+
+	// Coffee
+	$bg-color: #59524D;
+	$bg-lighten-color: #59524D;
+	$bg-featured: #C7A589;
+	&.admin-color-coffee #wp-admin-bar-pt_comingsoonblocks_toolbar_group {
+		> a {
+			color: #E5F8FF;
+			&::after { border-color: $bg-lighten-color; background-color: $bg-featured; }
+		}
+		.ab-submenu li {
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_contact-us { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_support-forum { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_upgrade { color: $bg-featured; background-color: $bg-lighten-color; }
+		}
+		&.hover > a::after { border-color: #46403C; }
+	}
+
+	// Coffee
+	$bg-color: #523F6D;
+	$bg-lighten-color: #523F6D;
+	$bg-featured: #A3B745;
+	&.admin-color-ectoplasm #wp-admin-bar-pt_comingsoonblocks_toolbar_group {
+		> a {
+			color: #ECE6F6;
+			&::after { border-color: $bg-lighten-color; background-color: $bg-featured; }
+		}
+		.ab-submenu li {
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_contact-us { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_support-forum { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_upgrade { color: $bg-featured; background-color: $bg-lighten-color; }
+		}
+		&.hover > a::after { border-color: #413257; }
+	}
+
+	// Midnight
+	$bg-color: #363B3F;
+	$bg-lighten-color: #363B3F;
+	$bg-featured: #E14D43;
+	&.admin-color-midnight #wp-admin-bar-pt_comingsoonblocks_toolbar_group {
+		> a {
+			color: #ECE6F6;
+			&::after { border-color: $bg-lighten-color; background-color: $bg-featured; }
+		}
+		.ab-submenu li {
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_contact-us { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_support-forum { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_upgrade { color: $bg-featured; background-color: $bg-lighten-color; }
+		}
+		&.hover > a::after { border-color: #26292B; }
+	}
+
+	// Ocean
+	$bg-color: #738E96;
+	$bg-lighten-color: #738E96;
+	$bg-featured: #9EBAA0;
+	&.admin-color-ocean #wp-admin-bar-pt_comingsoonblocks_toolbar_group {
+		> a {
+			color: #F2FCFF;
+			&::after { border-color: $bg-lighten-color; background-color: #76d27d; }
+		}
+		.ab-submenu li {
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_contact-us { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_support-forum { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_upgrade { color: $bg-featured; background-color: $bg-lighten-color; }
+		}
+		&.hover > a::after { border-color: #627C84; }
+	}
+
+	// Sunrise
+	$bg-color: #CF4844;
+	$bg-lighten-color: #CF4944;
+	$bg-featured: #F6D308;
+	&.admin-color-sunrise #wp-admin-bar-pt_comingsoonblocks_toolbar_group {
+		> a {
+			color: #F3F1F1;
+			&::after { border-color: $bg-lighten-color; background-color: $bg-featured; }
+		}
+		.ab-submenu li {
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_contact-us { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_support-forum { background-color: $bg-lighten-color; }
+			&#wp-admin-bar-pt_comingsoonblocks_toolbar_upgrade { color: $bg-featured; background-color: $bg-lighten-color; }
+		}
+		&.hover > a::after { border-color: #CD4843; }
+	}
+}

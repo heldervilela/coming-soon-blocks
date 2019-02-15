@@ -18,19 +18,19 @@
 /**
  * Password protected component.
  *
- * @package   Coming Soon Blocks
- * @author    Helder Vilela from Pixelthrone
- * @link      htts://pixelthrone.com
- * @license   GPL-3.0
+ * @package   @@pkg.title
+ * @author    @@pkg.author
+ * @link      @@pkg.author_uri
+ * @license   @@pkg.license
  */
 var r=function(){function t(){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.element=document.querySelector('[data-component="unlock-page"]'),this.element&&(this.body=document.body,this.Input=this.element.querySelector("input"),this.config={restURL:document.querySelector("body").dataset.resturl,nonce:document.querySelector("body").dataset.nonce},this.init())}return function(t,e,i){e&&o(t.prototype,e),i&&o(t,i)}(t,[{key:"init",value:function(){var t=this,e=this.element.querySelector(".button"),i=this.element.querySelector(".page-overlayer"),n=this.Input;this.body;e.addEventListener("click",function(e){e.preventDefault(),"close"===t.element.dataset.mode?t.element.dataset.mode="open":t.submit()}),i.addEventListener("click",function(e){e.preventDefault(),t.element.dataset.mode="close",n.value="",n.classList.remove("-error")})}},{key:"submit",value:function(){var t=this,e=this.Input;""===e.value?(e.classList.add("-error"),e.onkeypress=function(){e.classList.remove("-error"),delete e.onkeypress}):(this.element.dataset.loading=!0,fetch(function(t,e){var i="";for(var n in e)if(e.hasOwnProperty(n)){var s=e[n];i+=encodeURIComponent(n)+"="+encodeURIComponent(s)+"&"}return i.length>0&&(t=t+"?"+(i=i.substring(0,i.length-1))),t}(this.config.restURL+"v1/unlockpage",{_wpnonce:this.config.nonce,pwd:e.value}),{method:"GET"}).then(function(t){return Promise.all([t.ok,t.json()])}).then(function(e){var i=s(e,2),n=i[0],o=i[1];n?location.reload():(t.element.dataset.message=!0,t.element.querySelector(".content__wrapper span").innerHTML='<p class="-error">'.concat(o.message,"</p>"),t.element.dataset.loading=!1,setTimeout(function(){t.element.dataset.message=!1},3e3))}))}}]),t}();function a(t,e){for(var i=0;i<e.length;i++){var n=e[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}document.addEventListener("DOMContentLoaded",new r,!1);
 /**
  * Password protected component.
  *
- * @package   Coming Soon Blocks
- * @author    Helder Vilela from Pixelthrone
- * @link      htts://pixelthrone.com
- * @license   GPL-3.0
+ * @package   @@pkg.title
+ * @author    @@pkg.author
+ * @link      @@pkg.author_uri
+ * @license   @@pkg.license
  */
 var l=function(){function t(){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.element=document.querySelector('[data-component="cookie-notice"]'),this.element&&(this.config={restURL:document.querySelector("body").dataset.resturl,nonce:document.querySelector("body").dataset.nonce},this.init())}return function(t,e,i){e&&a(t.prototype,e),i&&a(t,i)}(t,[{key:"init",value:function(){var t=this;this.element.querySelector("button").addEventListener("click",function(e){e.preventDefault(),n("comingsoonblocks__cookie_notice","true",365),t.element.classList.add("-leave"),setTimeout(function(){return t.element.remove()},2e3)})}}]),t}();document.addEventListener("DOMContentLoaded",new l,!1);var h=i(9),c=i.n(h),d={autoPlay:5e3,pageDots:!1,prevNextButtons:!1,draggable:!1,wrapAround:!0};document.addEventListener("DOMContentLoaded",function(){var t=document.querySelector('[data-component="slideshow-background"] > div');t&&new c.a(t,d)}(),!1)},5:function(t,e,i){var n,s;
 /*!
